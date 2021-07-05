@@ -27,21 +27,22 @@ DDPG also uses four different neural networks; rather than just an actor and a c
 
 ### hyper-parameters
 
-- replay buffer size: 1e6
-- max timesteps: 3000 (all episodes get shutdown after 3000 timesteps)
-- minibatch size: 256
-- discount factor: 0.99
-- tau (soft update for target networks factor): 1e-3
-- learning rate: 1e-4 (actor) and 1e-3 (critic)
-- update interval (how often to learn): 2
-- beta start (factor for the noise added to the actions selected by the actor): 0.1
-- beta decay factor: 0.995
-- min beta: 0.01
+- n_episodes = 1000 #episode volume
+- max_t = 1000 
+- print_every = 10 # output update frequency
 
-I tuned the above parameters manually and randomly. It didn't take too long before I was successfully solving the environment. 
+- BUFFER_SIZE = int(1e5)  # replay buffer size
+- BATCH_SIZE = 128        # minibatch size
+- GAMMA = 0.99            # discount factor
+- TAU = 1e-3              # for soft update of target parameters
+- LR_ACTOR = 1e-4         # learning rate of the actor 
+- LR_CRITIC = 1e-3        # learning rate of the critic
+- WEIGHT_DECAY = 0        # L2 weight decay
+
+I tuned the above parameters manually. It didn't take too long before I was successfully solving the environment. That said, the running of this model takes a super long time, so there wasn't an insane volume of iteration.
 
 ### model architecture
-Because of the state space, my neural network takes a 33 by 1 vector from the environment. My output layer includes 4 outputs, 1 corresponding to each action in the action space. There are also 64 nodes in each of the two hidden layers.
+Because of the state space, my neural network takes a 33 by 1 vector from the environment. My output layer includes 4 outputs corresponding of values between -1 and 1 for each of the four actions in the action space. 
 
 ## plot & performance
 ![image](https://user-images.githubusercontent.com/13371867/123744365-e5985c80-d86b-11eb-9c00-0676df93dc08.png)
