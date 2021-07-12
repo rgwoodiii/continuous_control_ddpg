@@ -27,20 +27,20 @@ DDPG also uses four different neural networks; rather than just an actor and a c
 
 ### hyper-parameters
 
-n_episodes=3000         # maximum number of episodes to train
-max_t=1000              # maximum number of steps to train per episode
+- n_episodes=3000         # maximum number of episodes to train
+- max_t=1000              # maximum number of steps to train per episode
 
-BUFFER_SIZE = int(1e6)  # replay buffer size
-BATCH_SIZE = 128        # minibatch size
-GAMMA = 0.99            # discount factor
-TAU = 1e-3              # for soft update of target parameters
-LR_ACTOR = 1e-4         # learning rate of the actor 
-LR_CRITIC = 1e-3        # learning rate of the critic
-WEIGHT_DECAY = 0        # L2 weight decay
-LEARN_EVERY = 20        # update the networks 10 times after every 20 timesteps
-LEARN_NUMBER = 10       # update the networks 10 times after every 20 timesteps
-EPSILON = 1.0           # noise factor
-EPSILON_DECAY = 0.99    # noise factor decay
+- BUFFER_SIZE = int(1e6)  # replay buffer size
+- BATCH_SIZE = 128        # minibatch size
+- GAMMA = 0.99            # discount factor
+- TAU = 1e-3              # for soft update of target parameters
+- LR_ACTOR = 1e-4         # learning rate of the actor 
+- LR_CRITIC = 1e-3        # learning rate of the critic
+- WEIGHT_DECAY = 0        # L2 weight decay
+- LEARN_EVERY = 20        # update the networks 10 times after every 20 timesteps
+- LEARN_NUMBER = 10       # update the networks 10 times after every 20 timesteps
+- EPSILON = 1.0           # noise factor
+- EPSILON_DECAY = 0.99    # noise factor decay
 
 I tuned the above parameters manually. This each run took a very long time, I had to run this on the udacity provide GPU as my personal machine struggled. Given the runtime, I didn't perform as much iteration as I would have preferred.
 
