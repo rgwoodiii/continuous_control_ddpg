@@ -8,9 +8,6 @@ For any reinforcement learning implementation, the agent has to interact with th
 ### rewards
 The agent's goal is to maintain the arm in the target area for as long as possible (as measured by time steps). As such the agent recieves a reward of +.1 for each time step that the arm is in the target area.
 
-### state space
-The state space has to total of 37 dimensions and keeps information on the velocity of the agent, as well a ray based perception of objects in front of the agent.
-
 ### action space
 Within the environment, there is a discrete action space of 4. 
 Per the udacity program the agent able to take action represented by four numbers that correspond to the torque of the arm's two joints. 
@@ -42,7 +39,7 @@ DDPG also uses four different neural networks; rather than just an actor and a c
 - EPSILON = 1.0           # noise factor
 - EPSILON_DECAY = 0.99    # noise factor decay
 
-I tuned the above parameters manually. This each run took a very long time, I had to run this on the udacity provide GPU as my personal machine struggled. Given the runtime, I didn't perform as much iteration as I would have preferred.
+I tuned the above parameters manually. This each run took a very long time, I had to run this on the udacity provided GPU as my personal machine struggled. Given the runtime, I didn't perform as much iteration as I would have preferred.
 
 ### model architecture
 
@@ -55,10 +52,24 @@ input layer = 33
 output layer = 1
 
 ## plot & performance
-![image](https://user-images.githubusercontent.com/13371867/123744365-e5985c80-d86b-11eb-9c00-0676df93dc08.png)
-- Episode 100	Average Score: 12.19
-- Episode 108	Average Score: 13.02
-- Environment solved in 108 episodes!	Average Score: 13.02
+![image](https://user-images.githubusercontent.com/13371867/125349077-4d45b180-e31a-11eb-9099-5ef91a17dab1.png)
+- Episode 100 Average_Score: 1.74
+- Episode 200 Average_Score: 4.96
+- Episode 300 Average_Score: 7.33
+- Episode 400 Average_Score: 7.06
+- Episode 500 Average_Score: 9.63
+- Episode 600 Average_Score: 11.45
+- Episode 700 Average_Score: 14.32
+- Episode 800 Average_Score: 15.82
+- Episode 900 Average_Score: 17.76
+- Episode 1000 Average_Score: 18.53
+- Episode 1100 Average_Score: 21.97
+- Episode 1200 Average_Score: 22.40
+- Episode 1300 Average_Score: 23.30
+- Episode 1400 Average_Score: 24.84
+- Episode 1500 Average_Score: 28.03
+- Episode 1600 Average_Score: 28.02
+- Environment solved in 1551 episodes!	Average_Score: 30.02
 
 ## improvements
 
