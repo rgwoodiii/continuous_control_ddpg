@@ -44,16 +44,16 @@ I tuned the above parameters manually. This each run took a very long time, I ha
 ### model architecture
 
 #### actor architecture
-input layer = 33
-fully connected hidden layer = 400 nodes, relu activation function
-fully connected hidden layer = 300 nodes, relu activation function
-output layer = 4, tanh activation function
+- input layer = 33
+- fully connected hidden layer = 400 nodes, relu activation function
+- fully connected hidden layer = 300 nodes, relu activation function
+- output layer = 4, tanh activation function
 
 #### critic architecture
-input layer = 33
-fully connected hidden layer = 400 nodes, relu activation function
-fully connected hidden layer = 300+4(+ actions) nodes, relu activation function
-output layer = 1
+- input layer = 33
+- fully connected hidden layer = 400 nodes, relu activation function
+- fully connected hidden layer = 300+4(+ actions) nodes, relu activation function
+- output layer = 1
 
 ## plot & performance
 ![image](https://user-images.githubusercontent.com/13371867/125349077-4d45b180-e31a-11eb-9099-5ef91a17dab1.png)
